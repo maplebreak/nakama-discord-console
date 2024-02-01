@@ -1,0 +1,60 @@
+{
+  "name": "auth",
+  "description": "nakama auth command",
+  "options": [
+    {
+      "name": "device",
+      "description": "nakama auth over device_id",
+      "type": 1,
+      "options": [
+        {
+          "name": "match_name",
+          "type": 3,
+          "required": true,
+          "max_length": 20
+        },
+        {
+          "name": "match_max_size",
+          "type": 4,
+          "required": true,
+          "min_value": 2,
+          "max_value": 8
+        },
+        {
+          "name": "match_map",
+          "type": 3,
+          "required": true,
+          "choices": [
+            {
+              "name": "丛林",
+              "value": "map1"
+            },
+            {
+              "name": "深海",
+              "value": "map2"
+            }
+          ]
+        },
+        {
+          "name": "is_private",
+          "type": 5,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "list",
+      "description": "nakama list matches",
+      "type": 1,
+      "options": [
+        {
+          "name": "match_name",
+          "description": "filter match name(support regex pattern)",
+          "type": 3,
+          "required": false,
+          "max_length": 64
+        }
+      ]
+    }
+  ]
+}

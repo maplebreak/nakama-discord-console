@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: nakama-discord-console
+  main:
+    web-application-type: NONE
+
+discord:
+  token: ${DISCORD_TOKEN}
+  guild-id: ${DISCORD_GUILD_ID}
+  application-id: ${DISCORD_APPLICATION_ID}
+  activity: /nakama
+
+nakama:
+  host: localhost
+  port: 7349
+  serverKey: defaultkey
+  ssl: false
